@@ -1,0 +1,8 @@
+<h1>お気に入り一覧</h1>
+<p>ユーザー：<%= @user.name %></p>
+
+<% if @likes.any? %>
+  <%= render 'microposts/microposts', microposts: @likes %>
+<% else %>
+  <h2>お気に入りが未登録です。</h2>
+<% end %>
